@@ -1,0 +1,60 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "el rodeo",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "fs": {
+        "all": true,
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "copyFile": true,
+        "createDir": true,
+        "removeDir": true,
+        "removeFile": true,
+        "renameFile": true,
+        "exists": true,
+        "scope": ["$DOCUMENT/*", "$DESKTOP/**/**"]
+      },
+      "path": {
+        "all": true
+      }, 
+      "dialog": {
+        "confirm": true,
+        "message": true,
+        "open": true
+      }
+    },
+    "windows": [
+      {
+        "title": "El rodeo",
+        "width": 1100,
+        "height": 700
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",      
+      "identifier": "com.windows.starter",
+      "icon": [
+        "icons/ms-icon-150x150.png",
+        "icons/el_rodeo.ico"
+      ]
+    }
+  }
+}

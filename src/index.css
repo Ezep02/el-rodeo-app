@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.scroll-abrir-tarjeta {
+    scrollbar-width: none;
+    scrollbar-color: #c9c7c7 transparent;
+  }
+
+.text-wrap-custom {
+    width: 100%;
+    overflow-wrap: break-word;
+}
